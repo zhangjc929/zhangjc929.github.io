@@ -1,0 +1,38 @@
+﻿
+body, div {
+    margin: 0;
+    padding: 40px 0px 0px 0px;
+}
+body {
+    background: repeat-x scroll 0 0 #67ACE4;
+}
+
+#msg
+{
+	font-family: "Microsoft YaHei", Arial, sans-serif;
+	font-size: 32px;
+	color: #FFFFFF;
+}
+
+#container {
+    margin: 0 auto;
+    padding-top: 50px;
+    text-align: center;
+    width: 560px;
+}
+#container img {
+    border: medium none;
+    margin-bottom: 50px;
+}
+#container .error {
+    height: 200px;
+    position: relative;
+}
+#container .error img {
+    bottom: -50px;
+    position: absolute;
+    right: -50px;
+}
+#container .msg {
+    margin-bottom: 65px;
+}

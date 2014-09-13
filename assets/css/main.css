@@ -1,15 +1,7 @@
-/*
- * Author: Carlos Alvarez
- * URL: http://alvarez.is
- *
- * Project Name: Victoria vCard - Free Bootstrap 3 Theme
- * Version: 1.0
- * URL: http://blacktie.co
- */
 
 body {
   	background-color: #f2f2f2;
-    font-family: Microsoft YaHei, 黑体;
+    font-family: Microsoft YaHei UI, Microsoft YaHei, Arial, monospace, 黑体;
     font-weight: 300;
     font-size: 16px;
     color: #555;

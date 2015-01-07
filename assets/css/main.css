@@ -7,7 +7,8 @@ body {
     color: #555;
     padding-top: 8%;
     
-	background-image: url(../img/header-bg.jpg);
+	background-image: url('../img/header-bg.jpg');
+	background-image: url('http://lkytal.qiniudn.com/bg.jpg');
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-attachment: fixed;
@@ -15,7 +16,6 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    
   }
 
 /* Titles */

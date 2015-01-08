@@ -8,14 +8,13 @@
 	<meta name="author" content="lkytal">
 	<link rel="shortcut icon" href="assets/ico/favicon.ico">
 	<title>Coldfire's Dreamland</title>
-	
+
 	<link href="//libs.baidu.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 	<link href="//cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href="assets/css/main.css" rel="stylesheet">
 
 	<!--[if lt IE 9]>
 		<script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
 		<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
 	<![endif]-->
 	<!--[if lte IE 7]>
@@ -124,9 +123,9 @@
 								</div>
 								<!-- col-xs-6 -->
 								<div class="col-xs-6 centered">
-									<a href="http://bbs.kafan.cn/thread-1738924-1-1.html" target="_blank">
+									<a href="http://bbs.kafan.cn/thread-1729653-1-1.html" target="_blank">
 										<img class="img-responsive" src="assets/img/p04.png" alt="">
-										<h6><i class="icon-link"></i> UserChrome</h6>
+										<h6><i class="icon-link"></i> FireMenu</h6>
 									</a>
 								</div>
 								<!-- col-xs-6 -->
@@ -180,9 +179,11 @@
 	<script src="//libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
 	<script src="//libs.baidu.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 	<script>
-		$('#myTab a').click(function (e) {
-			e.preventDefault()
-			$(this).tab('show')
+		$(document).ready(function (){
+			$('#myTab a').click(function (e) {
+				e.preventDefault()
+				$(this).tab('show')
+			});
 		});
 	</script>
 	<script>
@@ -194,6 +195,9 @@
 			s.parentNode.insertBefore(hm, s);
 		})();
 	</script>
+	<!--[if lt IE 9]>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+	<![endif]-->
 	<!--[if lt IE 8]>
 		<script src="assets/js/icon-font-ie7.js"></script>
 	<![endif]-->

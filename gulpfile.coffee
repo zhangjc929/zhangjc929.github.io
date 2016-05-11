@@ -15,6 +15,8 @@ opacity = require 'postcss-opacity'
 pseudoelements = require 'postcss-pseudoelements'
 vmin = require 'postcss-vmin'
 pixrem = require 'pixrem'
+concat = require 'gulp-concat'
+purify = require 'gulp-purifycss'
 browserSync = require('browser-sync').create()
 
 processors = [
@@ -81,11 +83,28 @@ watchLess = (src, dest) ->
 	.pipe postcss(processors)
 	.pipe gulp.dest(dest)
 
+frameCss = (src, mod) ->
+	gulp
+	.src src
+	.pipe watch(mod)
+	.pipe plumber()
+	.on 'error', console.log
+	.pipe concat('lib.css')
+	.pipe purify(['./assets/**/*.js', './**/*.html'])
+	.pipe cleanCSS()
+	.pipe(autoprefixer({
+		browsers: ['> 2%', 'Android >= 4.0', 'IE 8'],
+		cascade: false
+	}))
+	.pipe postcss(processors)
+	.pipe gulp.dest('./assets/css')
+
 gulp.task 'less', ->
 	lessToJs './less/**/*.less', './assets/css'
 
 gulp.task 'watchLess', ->
 	watchLess './less/**/*.less', './assets/css'
+	frameCss ['./assets/css/bootstrap.css', './assets/css/flat-ui.css'], ['./*.html']
 
 gulp.task 'selfWatch', ->
 	restart = () ->
@@ -96,6 +115,10 @@ gulp.task 'selfWatch', ->
 		#process.exit(0)
 
 	watch('./gulpfile.coffee', restart).on 'error', (e) -> console.log(Chalk.red.blod(e.message))
+
+gulp.task 'watch', ->
+	gulp.start 'watchLess'
+	gulp.start 'selfWatch'
 
 gulp.task 'default', ['less'], ->
 	gulp.start 'web'

@@ -4,7 +4,6 @@ coffee = require 'gulp-coffee'
 watch = require 'gulp-watch'
 babel = require "gulp-babel"
 uglify = require 'gulp-uglify'
-nodemon = require 'gulp-nodemon'
 less = require 'gulp-less'
 Chalk = require 'chalk'
 cleanCSS = require 'gulp-clean-css'
@@ -27,13 +26,18 @@ processors = [
     pixrem
 ]
 
+beep = () -> console.log("\x07")
+
+showErr = (err) ->
+	beep()
+	console.log(err)
+
 coffeeToJs = (src, dest) ->
-	console.log "complie #{src}"
 	dest ?= './'
 	gulp
 	.src src
 	.pipe plumber()
-	.on 'error', console.log
+	.on 'error', showErr
 	.pipe coffee { bare: true }
 	.pipe babel()
 	#.pipe uglify()
@@ -52,7 +56,6 @@ watchCoffee = (src, dest) ->
 	.pipe gulp.dest(dest)
 
 lessToJs = (src, dest) ->
-	console.log "complie #{src}"
 	dest ?= './'
 	gulp
 	.src src

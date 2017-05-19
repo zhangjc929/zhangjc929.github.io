@@ -133,7 +133,7 @@ gulp.task 'web', ->
 		server: {
 			baseDir: "./"
 		}
-		files : ["*.html", "assets/**/*.*"]
-		browser : "ff"
-		port : 7000
+		files: ["*.html", "assets/**/*.*"]
+		browser: "ff"
+		port: 7000
 	}

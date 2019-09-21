@@ -1,0 +1,21 @@
+{
+  "name": "github.io",
+  "displayName": "lkytal website",
+  "description": "Lkytal .",
+  "version": "1.0.0",
+  "publisher": "lkytal",
+  "license": "AGPL-3.0+",
+  "devDependencies": {
+    "gulp-clean-css": "4.2.0",
+    "gulp-autoprefixer": "7.0.0",
+    "gulp-postcss": "8.0.0",
+    "postcss-color-rgba-fallback": "3.0.0",
+    "postcss-opacity": "5.0.0",
+    "pixrem": "5.0.0",
+    "gulp-concat": "2.6.1",
+    "gulp-purifycss": "0.2.0",
+    "gulp-coffee": "^3.0.3",
+    "postcss-vmin": "^3.0.0",
+    "postcss-pseudoelements": "^5.0.0"
+  }
+}
